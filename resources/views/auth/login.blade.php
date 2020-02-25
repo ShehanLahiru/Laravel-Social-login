@@ -59,6 +59,9 @@
                                 <a href="{{ url('auth/google') }}" class="btn btn-lg btn-primary btn-block">
                                     <strong>Login With Google</strong>
                                  </a>
+                                 <a href="{{ url('auth/facebook') }}" class="btn btn-lg btn-primary btn-block">
+                                    <strong>Login With Facebook</strong>
+                                 </a>
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
