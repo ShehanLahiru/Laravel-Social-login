@@ -56,10 +56,10 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-                                <a href="{{ url('auth/google') }}" class="btn btn-lg btn-primary btn-block">
+                                <a href="{{ url('auth/google') }}" class="btn btn-primary">
                                     <strong>Login With Google</strong>
                                  </a>
-                                 <a href="{{ url('auth/facebook') }}" class="btn btn-lg btn-primary btn-block">
+                                 <a href="{{ url('auth/facebook') }}" class="btn btn-primary">
                                     <strong>Login With Facebook</strong>
                                  </a>
 
