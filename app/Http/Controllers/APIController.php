@@ -6,6 +6,7 @@ use JWTAuth;
 use App\User;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Exceptions\JWTException;
+use App\Helpers\APIHelper;
 
 class APIController extends Controller
 {
@@ -17,16 +18,14 @@ class APIController extends Controller
         $token = null;
 
         if (!$token = JWTAuth::attempt($input)) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Invalid Email or Password',
-            ], 401);
+            // return response()->json([
+            //     'success' => false,
+            //     'message' => 'Invalid Email or Password',
+            // ], 401);
+            APIHelper::MakeAPIResponse(false,"invalid User",null,404);
         }
 
-        return response()->json([
-            'success' => true,
-            'token' => $token,
-        ]);
+        return APIHelper::MakeAPIResponse(true,"You are logged in",$token,200);
     }
 
     /**
